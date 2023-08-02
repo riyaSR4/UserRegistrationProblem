@@ -23,7 +23,7 @@ namespace UserRegistrationProblem
                     case 2:
                         Console.WriteLine("Enter the last name to validate:");
                         string LastName = Console.ReadLine();
-                        validate.FirstName(LastName);
+                        validate.LastName(LastName);
                         break;
                     case 3:
                         flag = false;
