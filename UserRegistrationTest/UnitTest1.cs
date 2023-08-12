@@ -153,5 +153,45 @@ namespace UserRegistrationTest
                 Assert.IsTrue(result);
             }
         }
+        [Test]
+        public void TestFirstNameRegex()
+        {
+            string input = "Riya";
+            Validate firstName = new Validate();
+            bool result = firstName.ValidateFirstNameRegex(input);
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void TestLastNameRegex()
+        {
+            string input = "Reji";
+            Validate lastName = new Validate();
+            bool result = lastName.ValidateLastNameRegex(input);
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void TestEmailRegex()
+        {
+            string input = "riyareji@gmail.com";
+            Validate email = new Validate();
+            bool result = email.ValidateEmailRegex(input);
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void TestPhoneNumberRegex()
+        {
+            string input = "91 9012345678";
+            Validate phonenumber = new Validate();
+            bool result = phonenumber.ValidatePhoneNumberRegex(input);
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void TestPasswordRegex()
+        {
+            string input = "Riya@1234";
+            Validate password = new Validate();
+            bool result = password.ValidatePasswordRegex(input);
+            Assert.IsTrue(result);
+        }
     }
 }
